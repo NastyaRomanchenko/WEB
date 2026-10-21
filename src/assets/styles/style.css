@@ -56,11 +56,8 @@
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
-  display: inline-block;
 }
 
 
@@ -133,10 +130,7 @@
   background: linear-gradient(to bottom, #e3eeed 0%, #6da5a6 100%);
   border-radius: 0 50% 50% 0 / 0 50% 50% 0;
   transform: translateX(50%);
-  
   border-right: 2px solid #fff;
   
   box-shadow: 2px 0 0 0 #222; 
-  
-  z-index: 2; 
 }
