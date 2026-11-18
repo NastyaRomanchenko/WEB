@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT WEBSITE lab5</title>
+    <link rel="stylesheet" href="src/assets/styles/style5.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <button class="header__burger" aria-label="Открыть меню">
+            <img src="src/assets/img/menu.webp" alt="Меню">
+        </button>
+        
+        <a href="#" class="header-brand">
+            <img src="src/assets/img/IT WEBSITE.png" alt="Логотип">
+        </a>
+
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li class="nav-menu__item"><a href="#services">Services</a></li>
+                <li class="nav-menu__item"><a href="#media">Media</a></li>
+                <li class="nav-menu__item"><a href="#cases">Cases</a></li>
+                <li class="nav-menu__item"><a href="#faq">FAQ</a></li>
+                <li class="nav-menu__item"><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-info">
+            <a href="tel:+71111111111" class="info-phone">+7 (111) 111-11-11</a>
+            <a href="tel:+71111111111" class="info-phones">+7 (111) 111-11-11</a>
+            <a href="mailto:company@mail.com" class="info-email">company@mail.com</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ЭКРАН 1: HERO / INTRO -->
+        <section class="intro" id="hero">
+            <div class="intro-content">
+                <h1 class="intro-heading">
+                    Development of <span class="text-blue">mobile applications</span> and <span class="text-blue">web services</span> of any complexity
+                </h1>
+                <p class="intro-description">We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices.</p>
+
+                <div class="intro-form-box">
+                    <h2 class="form-heading">Leave your contacts and we will call you back within 30 minutes</h2>
+                    <form action="#" class="callback-form">
+                        <div class="input-group">
+                            <label for="intro-phone">Phone number</label>
+                            <input type="tel" id="intro-phone" name="phone" placeholder="+7 (111) 111-11-11">
+                        </div>
+                        <div class="input-group">
+                            <label for="intro-name">Full name</label>
+                            <input type="text" id="intro-name" name="name" placeholder="Ivan Ivanov">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Get consultation</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="intro-image">
+                <img src="src/assets/img/phone.png" alt="">
+                <img src="src/assets/img/phone.png" alt="">
+                <img src="src/assets/img/phone.png" alt="">
+                <img src="src/assets/img/phone.png" alt="">
+                <img src="src/assets/img/phone.png" alt="">
+                <img src="src/assets/img/phone.png" alt="">
+            </div>
+        </section>
+
+        <!-- ЭКРАН 2: УСЛУГИ -->
+        <section class="services" id="services">
+            <div class="services__info">
+                <h2 class="section-title">Full development cycle</h2>
+                <p class="section-subtitle">We use proven technologies</p>
+
+                <div class="services__categories">
+                    <article class="services__category">
+                        <h3>Web</h3>
+                        <p class="services-text">
+                            PHP <span>/</span> JavaScript <span>/</span> Node.JS <span>/</span> Vue.js <span>/</span>
+                            Nuxt <span>/</span> MySQL <span>/</span> Laravel <span>/</span> Python
+                        </p>
+                    </article>
+
+                    <article class="services__category">
+                        <h3>Mobile</h3>
+                        <p class="services-text">
+                            Swift <span>/</span> Kotlin <span>/</span> Firebase <span>/</span> CoreData <span>/</span> 
+                            RxJava <span>/</span> RxSwift <span>/</span> Unit Test
+                        </p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="services__links">
+                <ul class="services-nav">
+                    <li><a href="#">iOS development</a></li>
+                    <li><a href="#">Android development</a></li>
+                    <li><a href="#">Web development</a></li>
+                    <li><a href="#">UI/UX design</a></li>
+                    <li><a href="#">Testing</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer" id="contacts">
+        <div class="footer-brand">
+            <img src="src/assets/img/IT WEBSITEW.png" alt="Логотип IT WEBSITE">
+        </div>
+
+        <div class="footer-info">
+            <div class="footer-detail">
+                <span class="detail-label">Contact nums</span>
+                <a href="tel:+77783659026" class="detail-value">+7 (778) 385 90 26</a>
+            </div>
+            <div class="footer-detail">
+                <span class="detail-label">Post</span>
+                <a href="mailto:mail@mail.com" class="detail-value">mail@mail.com</a>
+            </div>
+            <div class="footer-detail">
+                <span class="detail-label">Address</span>
+                <span class="detail-value">City city, street st. 90</span>
+            </div>
+            <div class="footer-detail">
+                <span class="detail-label">Leave a request</span>
+                <a href="#" class="detail-value">Leave a request</a>
+            </div>
+        </div>
+
+        <div class="footer-legal">
+            <span>We work throughout world</span>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.querySelector('.header');
+        const burger = document.querySelector('.header__burger');
+
+        burger.addEventListener('click', () => {
+            header.classList.toggle('active');
+        });
+
+        header.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => header.classList.remove('active'));
+        });
+    </script>
+
+</body>
+</html>
